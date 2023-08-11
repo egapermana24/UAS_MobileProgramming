@@ -215,7 +215,7 @@ class HomePage extends StatelessWidget {
                     crossAxisCount: 2,
                     childAspectRatio:
                         (MediaQuery.of(context).size.height - 50 - 25) /
-                            (4 * 175),
+                            (4 * 260),
                     mainAxisSpacing: 10,
                     crossAxisSpacing: 10,
                   ),
@@ -259,7 +259,7 @@ class HomePage extends StatelessWidget {
                             Text(
                               imgListName[index],
                               style: TextStyle(
-                                fontSize: 22,
+                                fontSize: 14,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.black.withOpacity(0.6),
                               ),
@@ -269,9 +269,9 @@ class HomePage extends StatelessWidget {
                               child: Align(
                                 alignment: Alignment.bottomCenter,
                                 child: Text(
-                                  "Lihat Selengkapnya",
+                                  "Selengkapnya",
                                   style: TextStyle(
-                                    fontSize: 15,
+                                    fontSize: 10,
                                     fontWeight: FontWeight.w500,
                                     color: Colors.black.withOpacity(0.5),
                                   ),
@@ -284,6 +284,7 @@ class HomePage extends StatelessWidget {
                     );
                   },
                 ),
+                SizedBox(height: 20),
               ],
             ),
           ),
