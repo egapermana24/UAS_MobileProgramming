@@ -119,7 +119,7 @@ class HomePage extends StatelessWidget {
                       hintText: "Cari Berita",
                       hintStyle: TextStyle(
                         color: Colors.grey,
-                        fontSize: 15,
+                        fontSize: 16,
                       ),
                       prefixIcon: Icon(
                         Icons.search,
@@ -249,7 +249,7 @@ class HomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20),
                                 child: Image.asset(
-                                  "../images/${imgList[index]}.jpg",
+                                  "assets/${imgList[index]}.jpg",
                                   width: 210,
                                   fit: BoxFit.cover,
                                 ),

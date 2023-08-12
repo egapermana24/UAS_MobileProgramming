@@ -54,7 +54,7 @@ class _CourseScreenState extends State<CourseScreen> {
                 borderRadius: BorderRadius.circular(20),
                 color: Color(0xFFF5F3FF),
                 image: DecorationImage(
-                  image: AssetImage('../images/${widget.imgList}.jpg'),
+                  image: AssetImage('assets/${widget.imgList}.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),

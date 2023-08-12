@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_uas/constant.dart';
-import 'package:flutter_application_uas/screens/home_screen.dart';
+import 'constant.dart';
+import 'screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,13 +34,14 @@ class _LoginPageState extends State<LoginPage> {
       body: SingleChildScrollView(
         child: Center(
           child: Container(
+            padding: EdgeInsets.only(top: 50),
             margin: EdgeInsets.symmetric(horizontal: 32),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // menambahkan gambar
                 Image.asset(
-                  "../images/login.jpg",
+                  "assets/login.jpg",
                   height: 180,
                 ),
                 Text(
@@ -62,10 +63,13 @@ class _LoginPageState extends State<LoginPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text(
-                      "Username",
-                      style: textTextStyle.copyWith(
-                          fontSize: 12, fontWeight: bold),
+                    Padding(
+                      padding: EdgeInsets.only(left: 16),
+                      child: Text(
+                        "Username",
+                        style: textTextStyle.copyWith(
+                            fontSize: 12, fontWeight: FontWeight.bold),
+                      ),
                     ),
                     SizedBox(
                       height: 10,
@@ -96,12 +100,14 @@ class _LoginPageState extends State<LoginPage> {
                   // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     // password
-                    Text(
-                      "Password",
-                      style: textTextStyle.copyWith(
-                          fontSize: 12, fontWeight: bold),
+                    Padding(
+                      padding: EdgeInsets.only(left: 16),
+                      child: Text(
+                        "Password",
+                        style: textTextStyle.copyWith(
+                            fontSize: 12, fontWeight: FontWeight.bold),
+                      ),
                     ),
-
                     SizedBox(
                       height: 10,
                     ),
@@ -128,12 +134,12 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     SizedBox(
-                      height: 15,
+                      height: 10,
                     ),
                   ],
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 5,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -141,29 +147,34 @@ class _LoginPageState extends State<LoginPage> {
                     Row(
                       children: [
                         // membuat checkbox
-                        Container(
-                          width: 20,
-                          height: 20,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            border: Border.all(
-                              color:
-                                  isChecked ? secondaryTextColor : Colors.grey,
+                        Padding(
+                          padding: EdgeInsets.only(left: 16.0),
+                          child: Container(
+                            width: 20,
+                            height: 20,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              border: Border.all(
+                                color: isChecked
+                                    ? secondaryTextColor
+                                    : Colors.grey,
+                              ),
+                            ),
+                            child: Checkbox(
+                              value: isChecked,
+                              onChanged: (value) {
+                                setState(() {
+                                  isChecked = value ?? false;
+                                });
+                              },
+                              activeColor: secondaryTextColor,
+                              checkColor: whiteColor,
                             ),
                           ),
-                          child: Checkbox(
-                            value: isChecked,
-                            onChanged: (value) {
-                              setState(() {
-                                isChecked = value ?? false;
-                              });
-                            },
-                            activeColor: secondaryTextColor,
-                            checkColor: whiteColor,
-                          ),
                         ),
+
                         SizedBox(
-                          width: 15,
+                          width: 10,
                         ),
                         Text(
                           "Ingat Aku",
@@ -171,17 +182,20 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ],
                     ),
-                    InkWell(
-                      onTap: () {
-                        // Tindakan yang ingin Anda lakukan saat tautan diklik
-                      },
-                      child: Text(
-                        "Lupa Password ?",
-                        style: textTextStyle.copyWith(
-                          fontSize: 12,
+                    Padding(
+                      padding: EdgeInsets.only(right: 16.0),
+                      child: InkWell(
+                        onTap: () {
+                          // Tindakan yang ingin Anda lakukan saat tautan diklik
+                        },
+                        child: Text(
+                          "Lupa Password ?",
+                          style: textTextStyle.copyWith(
+                            fontSize: 12,
+                          ),
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
                 SizedBox(
@@ -226,7 +240,7 @@ class _LoginPageState extends State<LoginPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "images/google.png",
+                          "assets/google.png",
                           height: 20,
                         ),
                         SizedBox(

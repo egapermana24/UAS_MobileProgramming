@@ -89,7 +89,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                       borderRadius: BorderRadius.circular(20),
                       color: Color(0xFFF5F3FF),
                       image: DecorationImage(
-                        image: AssetImage('../images/${imgList[index]}.jpg'),
+                        image: AssetImage('assets/${imgList[index]}.jpg'),
                         fit: BoxFit.cover,
                       ),
                     ),
